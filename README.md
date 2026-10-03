@@ -4,6 +4,8 @@ A single static page for the Wedding Day Binder: PDF pages for the week of the w
 
 The page is the offer. It does not take card numbers.
 
+The pictures are original files in `images/`: `binder-cover.png` is the week-of page, and `binder-on-table.jpg` is that page on a kitchen table with a pen. `images/cover.html` is the source for the cover, not a second store page.
+
 ## Open the page
 
 From this folder, start a static server:

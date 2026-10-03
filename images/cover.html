@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Week-of binder page</title>
+  <style>
+    @font-face {
+      font-family: "Newsreader";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../fonts/newsreader-latin-400-normal.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Newsreader";
+      font-style: italic;
+      font-weight: 400;
+      src: url("../fonts/newsreader-latin-400-italic.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Newsreader";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../fonts/newsreader-latin-600-normal.woff2") format("woff2");
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: #efe6d6;
+    }
+    .page {
+      width: 760px;
+      height: 460px;
+      background: #f7f2e8;
+      color: #1c1915;
+      font-family: "Newsreader", Palatino, Georgia, serif;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(28, 25, 21, 0.14);
+    }
+    .holes {
+      position: absolute;
+      left: 18px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .holes span {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #efe6d6;
+      box-shadow: inset 0 1px 1px rgba(28, 25, 21, 0.28);
+    }
+    .margin {
+      position: absolute;
+      left: 48px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #e0d3c0;
+    }
+    .inner {
+      padding: 28px 36px 24px 72px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .kicker {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 4px 0 0;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .sprig {
+      width: 34px;
+      height: 52px;
+      color: #4a5240;
+      flex: none;
+      margin-top: 2px;
+    }
+    .rule {
+      height: 2px;
+      background: #1c1915;
+      margin: 16px 0 14px;
+    }
+    .rows {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      row-gap: 12px;
+      align-items: baseline;
+    }
+    .label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .value {
+      font-size: 28px;
+      line-height: 1.15;
+      font-variant-numeric: lining-nums;
+    }
+    .value em {
+      font-style: italic;
+      font-weight: 400;
+    }
+    .foot {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid #e0d3c0;
+      font-size: 18px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <div class="holes" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="margin" aria-hidden="true"></div>
+    <div class="inner">
+      <div class="head">
+        <div>
+          <p class="kicker">Week of the wedding</p>
+          <h1>Saturday</h1>
+        </div>
+        <svg class="sprig" viewBox="0 0 64 104" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke-width="1.6" d="M32 100c-.6-24-.4-48 2-90"/>
+            <path stroke-width="1.4" d="M32 82c-10-2-20-10-22-18 8 2 16 8 22 16"/>
+            <path stroke-width="1.4" d="M33 64c12-3 22-12 24-20-8 3-16 10-24 18"/>
+            <path stroke-width="1.4" d="M33 46c-9-1-16-8-18-16 6 2 12 8 18 14"/>
+            <path stroke-width="1.3" d="M34 28c4-8 10-14 14-14-2 6-6 12-12 16"/>
+          </g>
+        </svg>
+      </div>
+      <div class="rule"></div>
+      <div class="rows">
+        <div class="label">Who to call</div>
+        <div class="value">Florist 555-0148</div>
+        <div class="label">Still owed</div>
+        <div class="value">Venue $1,400 <em>Friday</em></div>
+        <div class="label">In charge</div>
+        <div class="value">Sam, for decisions</div>
+      </div>
+      <p class="foot">One page. Keep it with you.</p>
+    </div>
+  </article>
+</body>
+</html>
