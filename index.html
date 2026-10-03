@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4efe6">
-  <meta name="description" content="The Wedding Day Binder is a PDF set for the week of the wedding: timeline, vendor contacts, payments still due, and who is in charge of what. $67.">
+  <meta name="description" content="The binder for the week of the wedding. Who to call, what is still owed, who is in charge. Wedding Day Binder, $67.">
   <title>Table Binder — Wedding Day Binder</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/newsreader-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/newsreader-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/binder-cover.png" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,27 +17,23 @@
     <header class="masthead">
       <svg class="sprig" viewBox="0 0 64 104" aria-hidden="true" focusable="false">
         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="1.4" d="M32 100c-.6-24-.4-48 2-90"/>
-          <path stroke-width="1.25" d="M32 82c-10-2-20-10-22-18 8 2 16 8 22 16"/>
-          <path stroke-width="1.05" d="M32 80c-8-6-14-12-18-16"/>
-          <path stroke-width="1.25" d="M33 64c12-3 22-12 24-20-8 3-16 10-24 18"/>
-          <path stroke-width="1.05" d="M33 62c8-6 16-14 20-18"/>
-          <path stroke-width="1.25" d="M33 46c-9-1-16-8-18-16 6 2 12 8 18 14"/>
-          <path stroke-width="1.05" d="M33 44c-6-6-12-12-14-14"/>
-          <path stroke-width="1.2" d="M34 28c4-8 10-14 14-14-2 6-6 12-12 16"/>
-          <path stroke-width="1.15" d="M34 26c-4-6-6-12-4-16 2 4 4 10 6 14"/>
+          <path stroke-width="1.6" d="M32 100c-.6-24-.4-48 2-90"/>
+          <path stroke-width="1.4" d="M32 78c-10-2-18-8-20-16 7 2 14 7 20 14"/>
+          <path stroke-width="1.4" d="M33 58c11-3 18-10 20-18-7 3-13 8-20 15"/>
+          <path stroke-width="1.3" d="M33 36c4-8 9-13 12-13-2 6-5 11-10 15"/>
         </g>
       </svg>
       <p class="brand">Table Binder</p>
     </header>
 
     <p class="week-line">The binder for the week of the wedding.</p>
+    <p class="panic">Who to call. What is still owed. Who is in charge.</p>
 
     <main>
       <article class="pack" id="binder">
         <h1 class="offer-name">Wedding Day Binder</h1>
         <p class="who">For the couple, or a parent paying for the wedding.</p>
-        <p class="what">Timeline, vendor contacts, payments still due, and who is in charge of what.</p>
+        <img class="cover" src="images/binder-cover.png" width="760" height="460" alt="A week-of binder page: who to call, what is still owed, and who is in charge.">
         <p class="price">$67</p>
         <p class="separate">The three files separately are $76.</p>
         <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the $67 binder</a>
@@ -49,8 +45,7 @@
 
         <article class="single">
           <h3 class="offer-name">Day-of Timeline</h3>
-          <p class="who">For the person keeping the day on time.</p>
-          <p class="what">The day, written in order, so another person can run it.</p>
+          <p class="what">The day, in order, for whoever is keeping the hours.</p>
           <p class="price">$27</p>
           <a class="buy" href="#binder" data-checkout="dayOfTimeline" aria-disabled="true">Get the $27 timeline</a>
           <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
@@ -58,8 +53,7 @@
 
         <article class="single">
           <h3 class="offer-name">Vendor &amp; Payment Sheet</h3>
-          <p class="who">For whoever is still paying vendors.</p>
-          <p class="what">Who to call, what is still owed, and when it is due.</p>
+          <p class="what">Who to call, and what is still owed.</p>
           <p class="price">$27</p>
           <a class="buy" href="#binder" data-checkout="vendorPaymentSheet" aria-disabled="true">Get the $27 sheet</a>
           <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
@@ -67,18 +61,22 @@
 
         <article class="single">
           <h3 class="offer-name">Who's in Charge Card</h3>
-          <p class="who">For the person others will find when something slips.</p>
-          <p class="what">Who handles vendors, family, and the small problems.</p>
+          <p class="what">Who is in charge when something slips.</p>
           <p class="price">$22</p>
           <a class="buy" href="#binder" data-checkout="whosInChargeCard" aria-disabled="true">Get the $22 card</a>
           <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
         </article>
       </section>
 
-      <article class="pack">
+      <figure class="table-shot">
+        <img src="images/binder-on-table.jpg" width="1152" height="864" alt="The same binder page on a kitchen table, with a pen beside it." loading="lazy">
+        <figcaption>Print it. Leave it on the table.</figcaption>
+      </figure>
+
+      <article class="pack pack-again">
         <h2 class="offer-name">Wedding Day Binder</h2>
         <p class="who">For the couple, or a parent paying for the wedding.</p>
-        <p class="what">Timeline, vendor contacts, payments still due, and who is in charge of what.</p>
+        <p class="what">Who to call. What is still owed. Who is in charge.</p>
         <p class="price">$67</p>
         <p class="separate">The three files separately are $76.</p>
         <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the $67 binder</a>
@@ -91,7 +89,7 @@
           <span>Print it.</span>
           <span>Keep it with you.</span>
         </h2>
-        <p>You download a PDF. Print the pages at home. Keep that copy with you the week of the wedding.</p>
+        <p>You get a PDF. Print the page. Keep that copy with you the week of the wedding.</p>
       </section>
     </main>
 
