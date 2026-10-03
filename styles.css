@@ -24,68 +24,42 @@
 
 :root {
   color-scheme: light;
-  --paper: #f4efe6;
-  --table: #e5d8c6;
-  --ink: #1c1915;
-  --ink-soft: #3f362e;
-  --rule: #d9cbb8;
-  --stem: #4a5240;
-  --serif: "Newsreader", "Iowan Old Style", Palatino, "Palatino Linotype", "Liberation Serif", Georgia, serif;
+  --room: #e6d8c6;
+  --sheet: #efe4d4;
+  --ink: #1a140f;
+  --soft: #3c322a;
+  --rule: #d2c2ae;
+  --serif: "Newsreader", Palatino, "Palatino Linotype", Georgia, serif;
 }
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--room);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.0625rem;
-  font-weight: 400;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  font-variant-numeric: lining-nums;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
+h1, h2, h3, p, ul, figure { margin: 0; }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+img { max-width: 100%; height: auto; }
 
-::selection {
-  background: #e4d3b6;
-  color: var(--ink);
-}
+ul { padding-left: 1.15rem; }
+
+li + li { margin-top: 0.25rem; }
 
 .sheet {
-  min-height: 100vh;
-  max-width: 40rem;
+  max-width: 28rem;
   margin: 0 auto;
-  padding: 0.85rem 1rem calc(2.5rem + env(safe-area-inset-bottom));
-  background-color: var(--paper);
-}
-
-.masthead {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 0.45rem;
-}
-
-.sprig {
-  width: 1.35rem;
-  height: 2.05rem;
-  color: var(--stem);
-  flex: none;
+  padding: 0.7rem 0.85rem calc(2.4rem + env(safe-area-inset-bottom));
+  background: var(--sheet);
+  min-height: 100vh;
 }
 
 .brand {
@@ -95,86 +69,71 @@ img {
   text-transform: uppercase;
 }
 
-.week-line {
-  font-size: 1.02rem;
-  font-style: italic;
+.hero h1 {
+  margin-top: 0.35rem;
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.dek {
+  margin-top: 0.35rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 
-.panic {
-  margin: 0.2rem 0 0.7rem;
-  font-size: 1.28rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.pack .offer-name,
-.single .offer-name {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.pack .offer-name {
-  font-size: 1.7rem;
-}
-
-.who,
-.what {
-  margin-top: 0.28rem;
-  line-height: 1.3;
-}
-
-.who {
-  font-style: italic;
-}
-
-.cover {
+.paper {
   display: block;
   width: 100%;
   margin-top: 0.7rem;
-  border: 1px solid rgba(28, 25, 21, 0.16);
-  box-shadow: 0 8px 18px rgba(60, 36, 14, 0.08);
+  box-shadow: 0 10px 22px rgba(55, 32, 12, 0.14);
+}
+
+.offer-name,
+.file {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero .offer-name {
+  margin-top: 0.75rem;
+  font-size: 1.15rem;
 }
 
 .price {
-  margin-top: 0.7rem;
+  margin-top: 0.15rem;
+  font-size: 2.35rem;
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1;
-  font-variant-numeric: lining-nums;
 }
 
-.pack .price {
-  font-size: 2.5rem;
-}
-
-.separate {
+.alone {
   margin-top: 0.28rem;
   font-size: 0.98rem;
-  line-height: 1.3;
 }
 
 .buy {
   display: block;
-  margin-top: 0.7rem;
-  padding: 0.9rem 1rem;
+  margin-top: 0.6rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--ink);
-  border-radius: 2px;
   background: var(--ink);
-  color: var(--paper);
+  color: #f6f0e6;
   font-family: inherit;
   font-size: 1.08rem;
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  font-variant-numeric: lining-nums;
 }
 
-.buy:hover {
-  background: #322b25;
+.buy:hover { background: #32281f; }
+
+.buy:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .single .buy {
@@ -182,107 +141,103 @@ img {
   color: var(--ink);
 }
 
-.single .buy:hover {
-  background: rgba(28, 25, 21, 0.05);
-}
-
-.buy:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
-}
+.single .buy:hover { background: rgba(26, 20, 15, 0.05); }
 
 .checkout-note {
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   font-style: italic;
-  line-height: 1.35;
 }
 
-.singles {
-  margin: 2rem 0 1.6rem;
-}
+.answers { margin-top: 2rem; }
 
-#pick-one {
-  margin-bottom: 0.7rem;
-  font-size: 1.5rem;
+.answers h2,
+.doc h2,
+.limits h2,
+.stack h2,
+.again h2,
+.who h2,
+.or {
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1.15;
 }
 
-.single {
-  border-top: 1px solid var(--rule);
-  padding: 0.9rem 0 0.1rem;
-}
+.answers h2 { font-size: 1.45rem; }
 
-.single .offer-name {
-  font-size: 1.32rem;
-}
+.answers figure { margin-top: 1rem; }
 
-.single .price {
-  font-size: 1.45rem;
+.answers figcaption,
+.table-shot figcaption {
   margin-top: 0.4rem;
+  font-style: italic;
 }
 
-.single .buy {
-  margin-top: 0.65rem;
-  margin-bottom: 0.85rem;
+.doc { margin-top: 2.1rem; }
+
+.file {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-.table-shot {
-  margin: 0 0 1.8rem;
+.doc h2 {
+  margin-top: 0.25rem;
+  font-size: 1.4rem;
 }
+
+.table-shot { margin-top: 2rem; }
 
 .table-shot img {
   display: block;
   width: 100%;
-  border: 1px solid rgba(28, 25, 21, 0.12);
+  box-shadow: 0 10px 22px rgba(55, 32, 12, 0.14);
 }
 
-.table-shot figcaption {
+.limits,
+.stack,
+.again,
+.who { margin-top: 2rem; }
+
+.limits h2,
+.stack h2,
+.who h2 { font-size: 1.45rem; }
+
+.limits p,
+.stack p,
+.limits ul,
+.stack ul,
+.who ul { margin-top: 0.55rem; }
+
+.again h2 { font-size: 1.55rem; }
+
+.or {
+  margin-top: 1.4rem;
+  font-size: 1.25rem;
+}
+
+.single { margin-top: 1.15rem; }
+
+.single .paper { margin-top: 0; }
+
+.single h3 {
   margin-top: 0.55rem;
-  font-style: italic;
-}
-
-.pack-again {
-  border-top: 2px solid var(--ink);
-  padding-top: 0.85rem;
-}
-
-.pack-again .what {
-  margin-top: 0.35rem;
-}
-
-.keep {
-  margin-top: 2.1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-#keep-heading {
-  font-size: 1.55rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.15;
 }
 
-#keep-heading span {
-  display: block;
-}
-
-.keep p {
-  margin-top: 0.75rem;
-}
+.single .price { font-size: 1.7rem; }
 
 .colophon {
-  margin-top: 1.8rem;
-  padding-top: 0.9rem;
+  margin-top: 2rem;
+  padding-top: 0.85rem;
   border-top: 1px solid var(--rule);
-  color: var(--ink-soft);
+  color: var(--soft);
   font-size: 0.98rem;
 }
 
 .colophon-name {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
   color: var(--ink);
   font-size: 0.72rem;
   font-weight: 600;
@@ -290,38 +245,11 @@ img {
   text-transform: uppercase;
 }
 
-@media (min-width: 720px) {
-  body {
-    background: var(--table);
-    padding: 2.25rem 1.5rem 3rem;
-  }
-
+@media (min-width: 760px) {
+  body { padding: 2rem 1.25rem 3rem; }
   .sheet {
     min-height: 0;
-    padding: 2.1rem 2.6rem 2.8rem;
-    border: 1px solid rgba(70, 48, 24, 0.1);
-    box-shadow: 0 16px 40px rgba(70, 42, 16, 0.06);
-  }
-
-  .panic {
-    font-size: 1.45rem;
-  }
-
-  .pack .offer-name {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 359px) {
-  .panic {
-    font-size: 1.12rem;
-  }
-
-  .pack .offer-name {
-    font-size: 1.5rem;
-  }
-
-  .pack .price {
-    font-size: 2.15rem;
+    padding: 1.6rem 1.7rem 2.4rem;
+    box-shadow: 0 16px 40px rgba(70, 42, 16, 0.08);
   }
 }
