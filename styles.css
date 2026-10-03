@@ -46,7 +46,7 @@ img { max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 26% center;
+  object-position: 18% 42%;
 }
 
 .hero-panel {
@@ -62,7 +62,7 @@ img { max-width: 100%; }
   left: 0;
   right: 0;
   bottom: 100%;
-  height: 22vh;
+  height: 6vh;
   background: linear-gradient(to top, var(--bg), transparent);
   pointer-events: none;
 }
