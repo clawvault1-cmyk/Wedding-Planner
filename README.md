@@ -2,6 +2,8 @@
 
 A single static page for the Wedding Day Binder. It is for the week of the wedding. The page does not take card numbers, and it does not show the file.
 
+The photograph is by Joel Santos on Pexels: [Newlywed couple and wedding guests](https://www.pexels.com/photo/newlywed-couple-and-wedding-guests-17569612/). Pexels License, commercial use allowed.
+
 ## Open the page
 
 ```bash
