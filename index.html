@@ -3,145 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#e7dccb">
-  <meta name="description" content="The page everyone texts instead of the couple. A print-at-home PDF for the week of the wedding. Wedding Day Binder, $67.">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta name="description" content="She is in the dress, and she is still the help desk. Wedding Day Binder, $67, for the week of the wedding.">
   <title>Table Binder — Wedding Day Binder</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/newsreader-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="images/hero.png" as="image">
+  <link rel="preload" href="images/moment.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="sheet">
-    <header class="masthead">
-      <p class="brand">Table Binder</p>
-    </header>
-
-    <main>
-      <article class="hero" id="binder">
-        <h1>The page everyone texts instead of the couple.</h1>
-        <p class="dek">A print-at-home PDF for the week of the wedding, not a full planner.</p>
-        <img class="paper" src="images/hero.png" width="1680" height="1252" alt="Sample Saturday, June 12. 4:00 pm ceremony at Harbor House. If it moves inside, Sam decides. Venue still owed $1,400. Dana Chen, 555-0142.">
-        <p class="offer-name">Wedding Day Binder</p>
+  <section class="hero">
+    <img src="images/moment.jpg" width="720" height="1280" alt="A woman in a white dress sits in a hotel chair and looks down at a phone. Someone beside her holds another phone out toward her.">
+    <div class="hero-panel">
+      <div class="hero-copy">
+        <h1>She is in the dress, and she is still the help desk.</h1>
         <p class="price">$67</p>
-        <p class="alone">The three files alone are $76.</p>
         <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+        <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="cost" aria-labelledby="cost-heading">
+      <h2 id="cost-heading">They pull her out of the chair for a text.</h2>
+      <p>A vendor arrives on the wrong clock. An hour of the room is already gone.</p>
+      <p>Her mother has one time. The DJ has another. Two people repeat both, and that story lasts longer than the wedding.</p>
+      <p>The friend who said she would run Saturday is finished by late afternoon. The questions come back to the chair.</p>
+      <p>A photographer’s hour. The room running long. A vendor who bills the wait.</p>
+      <p>She is the help desk, in the dress, on the day she was supposed to be done answering.</p>
+    </section>
+
+    <section class="relief" aria-labelledby="relief-heading">
+      <h2 id="relief-heading">Someone else is holding the day.</h2>
+      <p>The same question gets the same answer.</p>
+      <p>She stays in the chair.</p>
+      <p>Saturday was already decided.</p>
+    </section>
+
+    <section class="offer" id="binder" aria-labelledby="offer-heading">
+      <p class="week">Saturday, and the few days before it.</p>
+      <h2 id="offer-heading">Wedding Day Binder</h2>
+      <p class="price">$67</p>
+      <p class="alone">The three files alone are $76.</p>
+      <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+      <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+    </section>
+
+    <section class="singles" aria-labelledby="singles-heading">
+      <h2 id="singles-heading">Or buy one file.</h2>
+
+      <article>
+        <h3>Day-of Timeline</h3>
+        <p class="price">$27</p>
+        <a class="buy" href="#binder" data-checkout="dayOfTimeline" aria-disabled="true">Get the timeline</a>
         <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
       </article>
 
-      <section class="answers" aria-labelledby="answers-heading">
-        <h2 id="answers-heading">Three answers, already written down.</h2>
-        <figure>
-          <img class="paper" src="images/crop-time.png" width="1680" height="532" alt="Sample. 4:00 pm ceremony at Harbor House. If it moves inside, Sam decides. 555-0190.">
-          <figcaption>The time, and who decides if it moves inside.</figcaption>
-        </figure>
-        <figure>
-          <img class="paper" src="images/crop-money.png" width="1680" height="512" alt="Sample. Still owed $1,400 to Harbor House, due Friday. Dana Chen, 555-0142.">
-          <figcaption>What is still owed, and the number to call.</figcaption>
-        </figure>
-        <figure>
-          <img class="paper" src="images/crop-charge.png" width="1680" height="592" alt="Sample. Sam decides, 555-0190. Maya keeps the clock. Do not text the couple.">
-          <figcaption>Who is in charge. Not the couple.</figcaption>
-        </figure>
-      </section>
-
-      <section class="doc" id="timeline" aria-labelledby="timeline-heading">
-        <p class="file">Day-of Timeline</p>
-        <h2 id="timeline-heading">The day, in order, with a name on every hour.</h2>
-        <img class="paper" src="images/timeline.png" width="1600" height="2940" alt="Sample Saturday, June 12 timeline at Harbor House, from 9:00 am hair to 11:00 pm. 4:00 pm ceremony. If it moves inside, Sam decides, 555-0190.">
-      </section>
-
-      <section class="doc" id="payments" aria-labelledby="payments-heading">
-        <p class="file">Vendor &amp; Payment Sheet</p>
-        <h2 id="payments-heading">Who to call, and what is still owed, on the same page.</h2>
-        <img class="paper" src="images/payments.png" width="1600" height="2528" alt="Sample payment sheet. Harbor House still owed $1,400, due Friday, Dana Chen 555-0142. Still owed this week $1,800.">
-      </section>
-
-      <section class="doc" id="card" aria-labelledby="card-heading">
-        <p class="file">Who's in Charge Card</p>
-        <h2 id="card-heading">When something slips, this name decides.</h2>
-        <img class="paper" src="images/card.png" width="1600" height="2396" alt="Sample card. Decisions: Sam Okonkwo, 555-0190. The clock: Maya Ruiz, 555-0148. Do not text the couple unless Sam says to.">
-      </section>
-
-      <figure class="table-shot">
-        <img src="images/on-table.jpg" width="1080" height="740" alt="The same Saturday page on a bare wood table, with a pen. 4:00 pm and $1,400 are on the page.">
-        <figcaption>Print it. Leave it on the table.</figcaption>
-      </figure>
-
-      <section class="limits" aria-labelledby="limits-heading">
-        <h2 id="limits-heading">Only the week of the wedding.</h2>
-        <p>A PDF you print tonight and fill in pencil. US Letter.</p>
-        <ul>
-          <li>Not a 12-month planner.</li>
-          <li>Not a seating chart.</li>
-          <li>Not a shot list.</li>
-          <li>Not a palette.</li>
-          <li>Not a design app.</li>
-        </ul>
-      </section>
-
-      <section class="stack" aria-labelledby="stack-heading">
-        <h2 id="stack-heading">Three files. One stack.</h2>
-        <ul>
-          <li><strong>Day-of Timeline.</strong> Every hour has a name.</li>
-          <li><strong>Vendor &amp; Payment Sheet.</strong> Who to call, and what is still owed.</li>
-          <li><strong>Who's in Charge Card.</strong> The name that decides.</li>
-        </ul>
-        <p>No extra pages.</p>
-      </section>
-
-      <section class="again" aria-labelledby="again-heading">
-        <h2 id="again-heading">Wedding Day Binder</h2>
-        <p class="price">$67</p>
-        <p class="alone">The three files alone are $76.</p>
-        <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+      <article>
+        <h3>Vendor &amp; Payment Sheet</h3>
+        <p class="price">$27</p>
+        <a class="buy" href="#binder" data-checkout="vendorPaymentSheet" aria-disabled="true">Get the sheet</a>
         <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+      </article>
 
-        <h3 class="or">Or buy one.</h3>
-
-        <article class="single">
-          <img class="paper" src="images/crop-time.png" width="1680" height="532" alt="Sample crop of the 4:00 pm ceremony line.">
-          <h3>Day-of Timeline</h3>
-          <p class="price">$27</p>
-          <a class="buy" href="#timeline" data-checkout="dayOfTimeline" aria-disabled="true">Get the timeline</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-
-        <article class="single">
-          <img class="paper" src="images/crop-money.png" width="1680" height="512" alt="Sample crop of the $1,400 still owed to Harbor House.">
-          <h3>Vendor &amp; Payment Sheet</h3>
-          <p class="price">$27</p>
-          <a class="buy" href="#payments" data-checkout="vendorPaymentSheet" aria-disabled="true">Get the sheet</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-
-        <article class="single">
-          <img class="paper" src="images/crop-charge.png" width="1680" height="592" alt="Sample crop. Sam decides. 555-0190.">
-          <h3>Who's in Charge Card</h3>
-          <p class="price">$22</p>
-          <a class="buy" href="#card" data-checkout="whosInChargeCard" aria-disabled="true">Get the card</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-      </section>
-
-      <section class="who" aria-labelledby="who-heading">
-        <h2 id="who-heading">Who holds the phone.</h2>
-        <ul>
-          <li>The couple.</li>
-          <li>The maid of honor.</li>
-          <li>The parent who will be the phone.</li>
-        </ul>
-        <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+      <article>
+        <h3>Who's in Charge Card</h3>
+        <p class="price">$22</p>
+        <a class="buy" href="#binder" data-checkout="whosInChargeCard" aria-disabled="true">Get the card</a>
         <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-      </section>
-    </main>
+      </article>
+    </section>
+  </main>
 
-    <footer class="colophon">
-      <p class="colophon-name">Table Binder</p>
-      <p>PDF pages for the wedding week. No payment details are entered here.</p>
-    </footer>
-  </div>
+  <footer>
+    <p class="brand">Table Binder</p>
+    <p>No payment details are entered here.</p>
+  </footer>
+
   <script src="checkout.config.js"></script>
   <script src="main.js"></script>
 </body>

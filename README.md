@@ -1,10 +1,6 @@
 # Table Binder
 
-A single static page for the Wedding Day Binder: a print-at-home PDF for the week of the wedding, not a full planner.
-
-The page does not take card numbers.
-
-The pictures are sample pages for one fictional Saturday, set in `images/src/` and rendered to PNG. `images/on-table.jpg` is that Saturday page on a bare table with a pen.
+A single static page for the Wedding Day Binder. It is for the week of the wedding. The page does not take card numbers, and it does not show the file.
 
 ## Open the page
 
