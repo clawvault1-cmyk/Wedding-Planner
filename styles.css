@@ -29,7 +29,7 @@
   --ink: #1c1915;
   --ink-soft: #3f362e;
   --rule: #d9cbb8;
-  --stem: #5d644c;
+  --stem: #4a5240;
   --serif: "Newsreader", "Iowan Old Style", Palatino, "Palatino Linotype", "Liberation Serif", Georgia, serif;
 }
 
@@ -81,8 +81,8 @@ p {
 }
 
 .sprig {
-  width: 2.55rem;
-  height: 3.25rem;
+  width: 2.35rem;
+  height: 3.8rem;
   color: var(--stem);
   flex: none;
 }
@@ -163,6 +163,15 @@ p {
 
 .buy:hover {
   background: #322b25;
+}
+
+.single .buy {
+  background: transparent;
+  color: var(--ink);
+}
+
+.single .buy:hover {
+  background: rgba(28, 25, 21, 0.05);
 }
 
 .buy:focus-visible {
