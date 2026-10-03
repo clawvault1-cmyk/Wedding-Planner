@@ -3,101 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4efe6">
-  <meta name="description" content="The binder for the week of the wedding. Who to call, what is still owed, who is in charge. Wedding Day Binder, $67.">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta name="description" content="She is in the dress, and she is still the help desk. Wedding Day Binder, $67, for the week of the wedding.">
   <title>Table Binder — Wedding Day Binder</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/newsreader-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="images/binder-cover.png" as="image">
+  <link rel="preload" href="images/moment.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="sheet">
-    <header class="masthead">
-      <svg class="sprig" viewBox="0 0 64 104" aria-hidden="true" focusable="false">
-        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke-width="1.6" d="M32 100c-.6-24-.4-48 2-90"/>
-          <path stroke-width="1.4" d="M32 78c-10-2-18-8-20-16 7 2 14 7 20 14"/>
-          <path stroke-width="1.4" d="M33 58c11-3 18-10 20-18-7 3-13 8-20 15"/>
-          <path stroke-width="1.3" d="M33 36c4-8 9-13 12-13-2 6-5 11-10 15"/>
-        </g>
-      </svg>
-      <p class="brand">Table Binder</p>
-    </header>
-
-    <p class="week-line">The binder for the week of the wedding.</p>
-    <p class="panic">Who to call. What is still owed. Who is in charge.</p>
-
-    <main>
-      <article class="pack" id="binder">
-        <h1 class="offer-name">Wedding Day Binder</h1>
-        <p class="who">For the couple, or a parent paying for the wedding.</p>
-        <img class="cover" src="images/binder-cover.png" width="760" height="460" alt="A week-of binder page: who to call, what is still owed, and who is in charge.">
+  <section class="hero">
+    <img src="images/moment.jpg" width="720" height="1280" alt="In a hotel room, her wedding dress is only half buttoned. A florist waits in the doorway with buckets of flowers, and the alarm clock and a wristwatch show different times.">
+    <div class="hero-panel">
+      <div class="hero-copy">
+        <h1>She is in the dress, and she is still the help desk.</h1>
         <p class="price">$67</p>
-        <p class="separate">The three files separately are $76.</p>
-        <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the $67 binder</a>
+        <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+        <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="cost" aria-labelledby="cost-heading">
+      <h2 id="cost-heading">They pull her out of the chair for a text.</h2>
+      <p>A vendor arrives on the wrong clock. An hour of the room is already gone.</p>
+      <p>Her mother has one time. The DJ has another. Two people repeat both, and that story lasts longer than the wedding.</p>
+      <p>The friend who said she would run Saturday is finished by late afternoon. The questions come back to the chair.</p>
+      <p>A photographer’s hour. The room running long. A vendor who bills the wait.</p>
+      <p>She is the help desk, in the dress, on the day she was supposed to be done answering.</p>
+    </section>
+
+    <section class="relief" aria-labelledby="relief-heading">
+      <h2 id="relief-heading">Someone else is holding the day.</h2>
+      <p>The same question gets the same answer.</p>
+      <p>She stays in the chair.</p>
+      <p>Saturday was already decided.</p>
+    </section>
+
+    <section class="offer" id="binder" aria-labelledby="offer-heading">
+      <p class="week">Saturday, and the few days before it.</p>
+      <h2 id="offer-heading">Wedding Day Binder</h2>
+      <p class="price">$67</p>
+      <p class="alone">The three files alone are $76.</p>
+      <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the binder</a>
+      <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+    </section>
+
+    <section class="singles" aria-labelledby="singles-heading">
+      <h2 id="singles-heading">Or buy one file.</h2>
+
+      <article>
+        <h3>Day-of Timeline</h3>
+        <p class="price">$27</p>
+        <a class="buy" href="#binder" data-checkout="dayOfTimeline" aria-disabled="true">Get the timeline</a>
         <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
       </article>
 
-      <section class="singles" aria-labelledby="pick-one">
-        <h2 id="pick-one">Or pick one.</h2>
-
-        <article class="single">
-          <h3 class="offer-name">Day-of Timeline</h3>
-          <p class="what">The day, in order, for whoever is keeping the hours.</p>
-          <p class="price">$27</p>
-          <a class="buy" href="#binder" data-checkout="dayOfTimeline" aria-disabled="true">Get the $27 timeline</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-
-        <article class="single">
-          <h3 class="offer-name">Vendor &amp; Payment Sheet</h3>
-          <p class="what">Who to call, and what is still owed.</p>
-          <p class="price">$27</p>
-          <a class="buy" href="#binder" data-checkout="vendorPaymentSheet" aria-disabled="true">Get the $27 sheet</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-
-        <article class="single">
-          <h3 class="offer-name">Who's in Charge Card</h3>
-          <p class="what">Who is in charge when something slips.</p>
-          <p class="price">$22</p>
-          <a class="buy" href="#binder" data-checkout="whosInChargeCard" aria-disabled="true">Get the $22 card</a>
-          <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
-        </article>
-      </section>
-
-      <figure class="table-shot">
-        <img src="images/binder-on-table.jpg" width="1152" height="864" alt="The same binder page on a kitchen table, with a pen beside it." loading="lazy">
-        <figcaption>Print it. Leave it on the table.</figcaption>
-      </figure>
-
-      <article class="pack pack-again">
-        <h2 class="offer-name">Wedding Day Binder</h2>
-        <p class="who">For the couple, or a parent paying for the wedding.</p>
-        <p class="what">Who to call. What is still owed. Who is in charge.</p>
-        <p class="price">$67</p>
-        <p class="separate">The three files separately are $76.</p>
-        <a class="buy" href="#binder" data-checkout="weddingDayBinder" aria-disabled="true">Get the $67 binder</a>
+      <article>
+        <h3>Vendor &amp; Payment Sheet</h3>
+        <p class="price">$27</p>
+        <a class="buy" href="#binder" data-checkout="vendorPaymentSheet" aria-disabled="true">Get the sheet</a>
         <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
       </article>
 
-      <section class="keep" aria-labelledby="keep-heading">
-        <h2 id="keep-heading">
-          <span>Instant PDF.</span>
-          <span>Print it.</span>
-          <span>Keep it with you.</span>
-        </h2>
-        <p>You get a PDF. Print the page. Keep that copy with you the week of the wedding.</p>
-      </section>
-    </main>
+      <article>
+        <h3>Who's in Charge Card</h3>
+        <p class="price">$22</p>
+        <a class="buy" href="#binder" data-checkout="whosInChargeCard" aria-disabled="true">Get the card</a>
+        <p class="checkout-note" hidden>The checkout link for this file has not been added yet.</p>
+      </article>
+    </section>
+  </main>
 
-    <footer class="colophon">
-      <p class="colophon-name">Table Binder</p>
-      <p>PDF pages for the wedding week. No payment details are entered here.</p>
-    </footer>
-  </div>
+  <footer>
+    <p class="brand">Table Binder</p>
+    <p>No payment details are entered here.</p>
+  </footer>
 
   <script src="checkout.config.js"></script>
   <script src="main.js"></script>

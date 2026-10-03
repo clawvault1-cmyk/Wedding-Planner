@@ -1,190 +1,113 @@
-@font-face {
-  font-family: "Newsreader";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/newsreader-latin-400-normal.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Newsreader";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/newsreader-latin-400-italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Newsreader";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("fonts/newsreader-latin-600-normal.woff2") format("woff2");
-}
-
 :root {
-  color-scheme: light;
-  --paper: #f4efe6;
-  --table: #e5d8c6;
-  --ink: #1c1915;
-  --ink-soft: #3f362e;
-  --rule: #d9cbb8;
-  --stem: #4a5240;
-  --serif: "Newsreader", "Iowan Old Style", Palatino, "Palatino Linotype", "Liberation Serif", Georgia, serif;
+  color-scheme: dark;
+  --bg: #0c0b0a;
+  --ink: #f4f1ec;
+  --dim: #c4beb4;
+  --quiet: #8f8880;
+  --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
+
+html { background: var(--bg); }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.0625rem;
-  font-weight: 400;
   line-height: 1.4;
+  font-variant-numeric: lining-nums;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
+h1, h2, h3, p { margin: 0; }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+img { max-width: 100%; }
 
-::selection {
-  background: #e4d3b6;
-  color: var(--ink);
-}
+[hidden] { display: none !important; }
 
-.sheet {
-  min-height: 100vh;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0.85rem 1rem calc(2.5rem + env(safe-area-inset-bottom));
-  background-color: var(--paper);
-}
-
-.masthead {
+.hero {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 0.45rem;
+  align-items: flex-end;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
 }
 
-.sprig {
-  width: 1.35rem;
-  height: 2.05rem;
-  color: var(--stem);
-  flex: none;
-}
-
-.brand {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.week-line {
-  font-size: 1.02rem;
-  font-style: italic;
-  line-height: 1.3;
-}
-
-.panic {
-  margin: 0.2rem 0 0.7rem;
-  font-size: 1.28rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.pack .offer-name,
-.single .offer-name {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.pack .offer-name {
-  font-size: 1.7rem;
-}
-
-.who,
-.what {
-  margin-top: 0.28rem;
-  line-height: 1.3;
-}
-
-.who {
-  font-style: italic;
-}
-
-.cover {
-  display: block;
+.hero img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  margin-top: 0.7rem;
-  border: 1px solid rgba(28, 25, 21, 0.16);
-  box-shadow: 0 8px 18px rgba(60, 36, 14, 0.08);
+  height: 100%;
+  object-fit: cover;
+  object-position: 18% 42%;
+}
+
+.hero-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: var(--bg);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 6vh;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
+}
+
+.hero-copy {
+  width: min(36rem, 100%);
+  margin: 0 auto;
+  padding: 0.15rem 1.15rem calc(1rem + env(safe-area-inset-bottom));
+}
+
+.hero h1 {
+  max-width: 16em;
+  font-size: clamp(1.55rem, 6.6vw, 2.15rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
 .price {
-  margin-top: 0.7rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  margin-top: 0.55rem;
+  font-size: 2.75rem;
+  font-weight: 650;
+  letter-spacing: -0.04em;
   line-height: 1;
-  font-variant-numeric: lining-nums;
-}
-
-.pack .price {
-  font-size: 2.5rem;
-}
-
-.separate {
-  margin-top: 0.28rem;
-  font-size: 0.98rem;
-  line-height: 1.3;
 }
 
 .buy {
-  display: block;
-  margin-top: 0.7rem;
-  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  margin-top: 0.8rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--ink);
-  border-radius: 2px;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--bg);
   font-family: inherit;
-  font-size: 1.08rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 650;
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  font-variant-numeric: lining-nums;
 }
 
-.buy:hover {
-  background: #322b25;
-}
-
-.single .buy {
-  background: transparent;
-  color: var(--ink);
-}
-
-.single .buy:hover {
-  background: rgba(28, 25, 21, 0.05);
-}
+.buy:hover { background: #fff; }
 
 .buy:focus-visible {
   outline: 2px solid var(--ink);
@@ -192,136 +115,112 @@ img {
 }
 
 .checkout-note {
-  margin-top: 0.6rem;
-  font-style: italic;
-  line-height: 1.35;
-}
-
-.singles {
-  margin: 2rem 0 1.6rem;
-}
-
-#pick-one {
-  margin-bottom: 0.7rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.single {
-  border-top: 1px solid var(--rule);
-  padding: 0.9rem 0 0.1rem;
-}
-
-.single .offer-name {
-  font-size: 1.32rem;
-}
-
-.single .price {
-  font-size: 1.45rem;
-  margin-top: 0.4rem;
-}
-
-.single .buy {
   margin-top: 0.65rem;
-  margin-bottom: 0.85rem;
+  color: var(--dim);
+  font-size: 0.95rem;
 }
 
-.table-shot {
-  margin: 0 0 1.8rem;
+main {
+  width: min(36rem, 100%);
+  margin: 0 auto;
 }
 
-.table-shot img {
-  display: block;
-  width: 100%;
-  border: 1px solid rgba(28, 25, 21, 0.12);
+.cost,
+.relief,
+.offer,
+.singles {
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
 }
 
-.table-shot figcaption {
-  margin-top: 0.55rem;
-  font-style: italic;
+.cost { padding-top: 2.75rem; }
+
+.relief { padding-top: 2.85rem; }
+
+.cost h2,
+.relief h2,
+.offer h2,
+.singles h2 {
+  font-size: clamp(1.7rem, 7vw, 2.15rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
 }
 
-.pack-again {
-  border-top: 2px solid var(--ink);
-  padding-top: 0.85rem;
+.cost p,
+.relief p {
+  margin-top: 1.05rem;
+  color: var(--dim);
+  font-size: 1.125rem;
+  line-height: 1.45;
 }
 
-.pack-again .what {
-  margin-top: 0.35rem;
-}
+.relief { padding-bottom: 0.5rem; }
 
-.keep {
-  margin-top: 2.1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-#keep-heading {
-  font-size: 1.55rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-#keep-heading span {
-  display: block;
-}
-
-.keep p {
-  margin-top: 0.75rem;
-}
-
-.colophon {
-  margin-top: 1.8rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--rule);
-  color: var(--ink-soft);
-  font-size: 0.98rem;
-}
-
-.colophon-name {
-  margin-bottom: 0.3rem;
+.relief p {
   color: var(--ink);
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+.offer { padding-top: 3.25rem; }
+
+.week {
+  color: var(--quiet);
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.offer h2 { margin-top: 0.45rem; }
+
+.alone {
+  margin-top: 0.45rem;
+  color: var(--dim);
+  font-size: 1.02rem;
+}
+
+.singles { padding-top: 3.1rem; }
+
+.singles article { margin-top: 1.7rem; }
+
+.singles h3 {
+  font-size: 1.28rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.singles .price {
+  margin-top: 0.2rem;
+  font-size: 1.65rem;
+}
+
+.singles .buy {
+  background: transparent;
+  color: var(--ink);
+}
+
+.singles .buy:hover { background: rgba(244, 241, 236, 0.06); }
+
+footer {
+  width: min(36rem, 100%);
+  margin: 0 auto;
+  padding: 2.75rem 1.2rem calc(2.4rem + env(safe-area-inset-bottom));
+  color: var(--quiet);
+  font-size: 0.95rem;
+}
+
+.brand {
+  margin-bottom: 0.3rem;
+  color: var(--dim);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 650;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-@media (min-width: 720px) {
-  body {
-    background: var(--table);
-    padding: 2.25rem 1.5rem 3rem;
-  }
-
-  .sheet {
-    min-height: 0;
-    padding: 2.1rem 2.6rem 2.8rem;
-    border: 1px solid rgba(70, 48, 24, 0.1);
-    box-shadow: 0 16px 40px rgba(70, 42, 16, 0.06);
-  }
-
-  .panic {
-    font-size: 1.45rem;
-  }
-
-  .pack .offer-name {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 359px) {
-  .panic {
-    font-size: 1.12rem;
-  }
-
-  .pack .offer-name {
-    font-size: 1.5rem;
-  }
-
-  .pack .price {
-    font-size: 2.15rem;
-  }
+@media (min-width: 760px) {
+  .hero-copy,
+  main,
+  footer { width: min(34rem, calc(100% - 3rem)); }
 }
